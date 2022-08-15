@@ -1,0 +1,30 @@
+.card{
+    border-width: 6px;
+    width: 200px;
+    box-shadow: rgb(66, 124, 185) 0px 20px 30px -10px;
+    height: 230px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 20px;
+}
+.card h4{
+    margin: 0;
+}
+.textTransfor{
+    text-transform: capitalize;
+    font-size: 20px;
+    font-style: italic;
+    color:aqua;
+}
+.textTransforType{
+    text-transform: capitalize;
+    font-size: 15px;
+    font-style: italic;
+    border-radius: 8px;
+    border-width: 2px;
+}
+.card img{
+    object-fit: contain;
+    width:130px;
+    height:150px
+}

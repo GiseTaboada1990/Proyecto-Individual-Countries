@@ -1,0 +1,170 @@
+.cardDetailActivitiesWrapper {
+    width: 600px;
+    margin: 0 auto;
+    color: #fff;
+}
+
+.cardDetailActivitiesWrapper button {
+
+    align-items: center;
+    background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+    border: 0;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 15px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 140px;
+    padding: 3px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.cardDetailActivitiesWrapper button:hover {
+    background: darkblue;
+    color:aqua;
+}
+
+.cardDetailActivitiesWrapper button:active,
+.cardDetailActivitiesWrapper button:hover {
+    outline: 0;
+}
+
+.cardDetailActivitiesWrapper button span {
+    background-color: rgb(5, 6, 45);
+    padding: 16px 24px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.cardDetailActivitiesWrapper button:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .cardDetailActivitiesWrapper button {
+        font-size: 18px;
+        min-width: 121px;
+    }
+}
+
+.cardDetails {
+    background-color: rgba(0, 0, 139, 0.418);
+    border: 1px solid #baccd8;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+.cardDetails:hover {
+
+    border: 1px solid #baccd8;
+    border-bottom-right-radius: 25px;
+    border-top-left-radius: 25px;
+    margin-top: 5px;
+    position: absolute;
+}
+
+
+
+.cardDetails_img {
+    display: block;
+    margin: 0 auto;
+    align-items: center;
+    width: 40%;
+    height: 40%;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    ;
+}
+
+.cardDetails h1 {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 600;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.cardDetails h4 {
+    text-transform: capitalize;
+    font-size: 15px;
+    font-weight: 600;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    letter-spacing: 150%;
+}
+
+.act_title {
+    color: aqua;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.act_wrapper {
+    text-transform: capitalize;
+    width: 575px;
+    height: auto;
+    box-sizing: border-box;
+    margin: 5px;
+    padding: 5px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #c5c5c5;
+    border-radius: 10px;
+    list-style:none;
+}
+
+.act {
+    width: 550px;
+    height: auto;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 300;
+    background-color: rgba(0, 0, 0, 0.534);
+    margin: 5px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    border-radius: 0.5rem;
+    letter-spacing: 150%;
+}
+
+.ntFound {
+    width: 100%;
+    padding: 0 20px;
+    font-size: 50px;
+}
+
+.dispButton {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: -220px;
+    margin-top: 20px;
+}
+.btnDetails{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px; 
+    font-size: 10px;
+}

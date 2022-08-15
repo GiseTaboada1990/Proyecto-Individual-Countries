@@ -1,0 +1,18 @@
+.cardAct{
+    border-width: 6px;
+    width: 200px;
+    box-shadow: rgb(66, 124, 185) 0px 20px 30px -10px;
+    height: 230px;
+    margin: 10px;
+    background-color: rgba(0, 0, 0, 0.377);
+    border-radius: 20px;
+    color:aqua;
+}
+.cardAct h4{
+    text-align: left;
+    margin: 7px;
+    text-transform: capitalize;
+    font-size: 15px;
+    border-radius: 8px;
+    border-width: 2px;
+}

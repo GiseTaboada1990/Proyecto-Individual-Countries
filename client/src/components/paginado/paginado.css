@@ -1,0 +1,28 @@
+.paginado{
+    display: flex;
+    justify-content: space-around;
+    color: aqua;
+    width:300px;
+    margin: 0 auto 10px;
+    align-items: center;
+}
+.paginado button{
+    border: 1px solid aqua;
+    background-color: black;
+    border-radius: 10px;
+    color: aqua;
+    cursor: pointer;
+}
+.paginado button:disabled{
+    background-color: darkslategray;
+    color: black;
+}
+.btnPage{
+    cursor: pointer;
+    background-color: black;
+    padding: 5px 10px;
+    border-radius: 50px;
+}
+.btnPage:hover{
+    transform:scale(1.10);
+}

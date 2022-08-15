@@ -1,0 +1,37 @@
+.ordenarPaises{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 65px 10px 10px 10px;
+    color: aqua
+}
+.body{
+    width: 94%;
+}
+.menuLinks{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 0 20px;
+}
+.menuLinks a{
+    margin-left: 10px;
+    color:aqua;
+    text-decoration: none;
+}
+.filters{
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    margin: 20px auto 0;
+}
+.filters select{
+    border: 1px solid aqua;
+    background-color: black;
+    border-radius: 10px;
+    color: aqua;
+}
+.nav{
+    width:100%;
+}
+
