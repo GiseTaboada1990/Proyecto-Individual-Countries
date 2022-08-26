@@ -60,6 +60,33 @@ router.get('/countries', async (req, res) => {
         res.status(404).json(error)
     }
 })
+router.post('/activities', async (req, res) => {
+    try{ 
+    const {
+        name,
+        country,
+        duration,
+        difficulty,
+        season,
+    } = req.body
+        const [newActivity, created] = await Activity.findOrCreate({
+            where: {name},
+            defaults:{
+                difficulty,
+                duration,
+                season,
+            },
+    })
+
+        const countryFind = await Country.findAll({ where: { name: { [Op.or]: country } } })
+        await newActivity.addCountry(countryFind)
+        !created ? res.status(200).json('The activity has already been created for these countries')
+        :res.status(201).json(newActivity)
+    } catch (error) {
+        console.log(error)
+      res.status(400).json(error)
+    }
+})
 router.get('/countries/:id', async(req, res)=>{
     const idCountry= req.params.id
     const idCountryM = idCountry.toUpperCase()
@@ -75,32 +102,6 @@ router.get('/countries/:id', async(req, res)=>{
                 console.log(error)
                 res.status(404).json(error)
             }
-})
-router.post('/activities', async (req, res) => {
-    try{ 
-    const {
-        name,
-        country,
-        duration,
-        difficulty,
-        season,
-    } = req.body
-        const [newActivity, created] = await Activity.findOrCreate({
-            where: {[Op.iLike]: `%${name}%`},
-            defaults:{
-                difficulty,
-                duration,
-                season,
-            },
-        })
-
-        const countryFind = await Country.findAll({ where: { name: { [Op.or]: country } } })
-        await newActivity.addCountry(countryFind)
-        !created ? res.status(200).json('The activity has already been created for these countries')
-        :res.status(201).json(newActivity)
-    } catch (error) {
-      res.status(404).json(error)
-    }
 })
 
 router.get('/activities', async (req, res) => {
