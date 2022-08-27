@@ -9,6 +9,7 @@
 }
 .card h4{
     margin: 0;
+    color: aqua
 }
 .textTransfor{
     text-transform: capitalize;
