@@ -6,6 +6,8 @@ import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './createActivity.css'
 
+const urlDeploy = 'https://countries-app03.herokuapp.com'
+
 export const CreateActivity = () => {
     const countries = useSelector(state => state.countries)
     const dispatch = useDispatch()
@@ -125,7 +127,7 @@ export const CreateActivity = () => {
                 let a = difficulty1.indexOf(input.difficulty) + 1
                 input.difficulty = a
             }
-            axios.post('http://localhost:3001/activities',input)
+            axios.post(`${urlDeploy}/activities`,input)
             .then(res=>{
                 if(res.status === 201) {
                 setInput({
