@@ -90,7 +90,7 @@ export const Home = ()=>{
             <div className='menuLinks'>
             <Link className='link' to='/home/create/activities'> Activity List </Link>
             <Link className='link' to='/home/create'> Crear Activity </Link>
-            <Link className='link' to='/'>Inicio</Link>
+            <Link className='link' to='/'>Beginning</Link>
             </div>
             <SearchBar setCurrentPage={setCurrentPage}/>
             <Paginado

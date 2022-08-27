@@ -2,7 +2,7 @@
   text-align: center;
   background:url('../src/countries1.png') ;
     background-size: cover;
-    height: 100vh;
+    height: 80vh;
     box-sizing: border-box;
     overflow: scroll;
 }
