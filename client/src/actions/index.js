@@ -17,10 +17,12 @@ export const GET_COUNTRY_ACTIVITIES= 'GET_COUNTRY_ACTIVITIES';
 export const GET_ACTIVITIES_DETAILS='GET_ACTIVITIES_DETAILS';
 export const  UPDATE_ACTIVITY=' UPDATE_ACTIVITY';
 
+const urlDeploy = 'https://countries-app03.herokuapp.com'
+
 export const getCountries = () => {
     return async (dispatch)=> {
         try {
-            const json = await axios.get(`http://localhost:3001/countries`)
+            const json = await axios.get(`${urlDeploy}/countries`)
             const data = json.data
             return dispatch({
                 type: GET_COUNTRIES,
@@ -34,7 +36,7 @@ export const getCountries = () => {
 export const getDetails = (id) => {
     return async (dispatch) => {
         try {
-            const json = await axios(`http://localhost:3001/countries/${id}`)
+            const json = await axios(`${urlDeploy}/countries/${id}`)
             return dispatch({
                 type: GET_DETAILS,
                 payload: json.data
@@ -54,7 +56,7 @@ export const cleanDetails = () => {
 export const searchName = (name) => {
     return async (dispatch) => {
         try {
-            const json = await axios(`http://localhost:3001/countries?name=${name}`)
+            const json = await axios(`${urlDeploy}/countries?name=${name}`)
             return dispatch({
                 type: GET_NAME,
                 payload: json.data
@@ -67,7 +69,7 @@ export const searchName = (name) => {
 export const getActivities = () => {
     return async (dispatch) => {
         try {
-            const json = await axios('http://localhost:3001/activities')
+            const json = await axios(`${urlDeploy}/activities`)
             return dispatch({
                 type: GET_ACTIVITIES,
                 payload: json.data
@@ -80,7 +82,7 @@ export const getActivities = () => {
 export const searchNameActivity = (name) => {
     return async (dispatch) => {
         try {
-            const json = await axios(`http://localhost:3001/activities?name=${name}`)
+            const json = await axios(`${urlDeploy}/activities?name=${name}`)
             return dispatch({
                 type: GET_ACTIVITY_NAME,
                 payload: json.data
@@ -117,7 +119,7 @@ export const filterByContinents = (payload) => {
 export const getActivitiesDetails = (id) => {
     return async (dispatch) => {
         try {
-            const json = await axios(`http://localhost:3001/activities/${id}`)
+            const json = await axios(`${urlDeploy}/activities/${id}`)
             return dispatch({
                 type: GET_ACTIVITIES_DETAILS,
                 payload: json.data
@@ -131,7 +133,7 @@ export const getActivitiesDetails = (id) => {
 export const deleteActivities =(id) => {
     return async(dispatch)=>{
         try{
-            const json= await axios.delete(`http://localhost:3001/activities/${id}`)
+            const json= await axios.delete(`${urlDeploy}/activities/${id}`)
             return dispatch({
                 type: DELETE_ACTIVITIES,
                 payload:json.data
@@ -145,7 +147,7 @@ export const deleteActivities =(id) => {
 export const updateActivity=(id, form)=>{
     return async (dispatch)=>{
         try{
-            const json = await axios.put(`http://localhost:3001/activities/${id}`, form)
+            const json = await axios.put(`${urlDeploy}/activities/${id}`, form)
             const data = json.data;
             if(data.status === 200) dispatch({
                 type: UPDATE_ACTIVITY,
