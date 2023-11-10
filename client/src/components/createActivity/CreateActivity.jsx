@@ -6,7 +6,7 @@ import { Link, useHistory } from 'react-router-dom';
 import axios from 'axios';
 import './createActivity.css'
 
-const urlDeploy = 'https://countries-app03.herokuapp.com'
+const urlDeploy = 'https://vercel-ecommerce-shoes.vercel.app/'
 
 export const CreateActivity = () => {
     const countries = useSelector(state => state.countries)

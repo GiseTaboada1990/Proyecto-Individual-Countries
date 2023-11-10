@@ -28,7 +28,7 @@ export const Home = ()=>{
     const currentCountries= state.countries.slice(indexFirstCountry, lastCountry)
     const nextPage= currentPage + 1;
     const prevPage= currentPage - 1;
-   
+   console.log(currentCountries)
     const paginado =(pag)=>{
         setCurrentPage(pag)
     };

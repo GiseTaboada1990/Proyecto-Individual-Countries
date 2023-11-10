@@ -15,9 +15,9 @@ export const DELETE_ACTIVITIES = 'DELETE_COUNTRY';
 export const GET_ACTIVITY_NAME = 'GET_ACTIVITY_NAME';
 export const GET_COUNTRY_ACTIVITIES= 'GET_COUNTRY_ACTIVITIES';
 export const GET_ACTIVITIES_DETAILS='GET_ACTIVITIES_DETAILS';
-export const  UPDATE_ACTIVITY=' UPDATE_ACTIVITY';
+export const UPDATE_ACTIVITY=' UPDATE_ACTIVITY';
 
-const urlDeploy = 'https://countries-app03.herokuapp.com'
+const urlDeploy = 'https://vercel-ecommerce-shoes.vercel.app/'
 
 export const getCountries = () => {
     return async (dispatch)=> {
