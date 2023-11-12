@@ -1,15 +1,9 @@
 require('dotenv').config();
 const { Sequelize } = require('sequelize');
-import pg from 'pg'
 const fs = require('fs');
 const path = require('path');
-const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME,POSTGRES_URL } = process.env;
+const { DB_USER, DB_PASSWORD, DB_HOST, DB_NAME } = process.env;
 
-const { Pool } = pg;
-
-const pool = new Pool({
-  connectionString: POSTGRES_URL + "?sslmode=require",
-})
 let sequelize =
   process.env.NODE_ENV === "production"
     ? new Sequelize({
@@ -67,5 +61,5 @@ Activity.belongsToMany(Country, {through: "Country_Activity",timestamps: false})
 
 module.exports = {
   ...sequelize.models, // para poder importar los modelos así: const { Product, User } = require('./db.js');
-  conn: sequelize,     // para importart la conexión { conn } = require('./db.js');
+  conn: sequelize, // para importart la conexión { conn } = require('./db.js');
 };
